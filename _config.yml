@@ -106,5 +106,5 @@ theme: next
 deploy:
   type: git
   repo: https://github.com/livelihao/livelihao.github.io
-  branch: main
+  branch: pages
   message: Update Hexo Static Content
