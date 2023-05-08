@@ -1,0 +1,31 @@
+# Site
+author: Livehao
+description: 'Believe you can and you\'re halfway there.'
+
+cache:
+  enable: true
+  
+minify: true # NexT allows to minify Hexo generation.
+
+#scheme: Muse
+#scheme: Mist
+#scheme: Pisces
+scheme: Gemini
+
+darkmode: true
+
+creative_commons:
+  # Available values: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | cc-zero
+  license: by-nc-sa
+  # Available values: big | small
+  size: small
+  sidebar: true
+  post: true
+  language: deed.zh
+
+open_graph:
+  enable: true
+  # Add pairs each line to customize
+  options:
+    type: blog
+
