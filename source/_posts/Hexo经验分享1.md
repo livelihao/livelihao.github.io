@@ -1,12 +1,18 @@
 ---
-title: Hexo 使用教程(1) | 初识 Hexo 和相关配置
+title: Hexo 经验分享(1) | 初识 Hexo 和相关配置
 date: 2023-05-11 15:43:30
-tags: Hexo
+categories:
+- Hexo 教程 
+tags:
+- Hexo 教程
+- 博客教程
+comments: true
+copyright: true
 ---
 
 Hexo 是一个基于 Node.js 的静态博客搭建框架，可以让你使用 Markdown 语言来写作，并将 Markdown 文本转换为静态网页，以便于发布到服务器上. 
 
-在本文中，我将基于 Hexo 和 Github 服务器部署的方式，总结 Hexo 配置过程，帮助你轻松地搭建一个漂亮、高效的个人博客网站。
+在本文中，我将基于 Hexo 和 Github 服务器部署的方式，总结 Hexo 配置过程，帮助你轻松地搭建一个漂亮、高效的个人博客网站.
 
 <!-- more -->
 
