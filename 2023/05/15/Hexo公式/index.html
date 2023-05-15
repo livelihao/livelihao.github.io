@@ -19,27 +19,30 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+    <meta name="description" content="在使用 markdown 编写文章时，有些公式并不能正确显示. 在配置网站时，这个问题困扰了好久，解决方法和网上有些不同，遇到的问题是，本地的 markdown 公式在本地正确地显示，在网站上行间公式既不显示，也不渲染.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2023/05/08/hello-world/index.html">
+<meta property="og:title" content="Hexo 经验分享(4) | Hexo 数学公式渲染">
+<meta property="og:url" content="http://example.com/2023/05/15/Hexo%E5%85%AC%E5%BC%8F/index.html">
 <meta property="og:site_name" content="自由笔记">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta property="og:description" content="在使用 markdown 编写文章时，有些公式并不能正确显示. 在配置网站时，这个问题困扰了好久，解决方法和网上有些不同，遇到的问题是，本地的 markdown 公式在本地正确地显示，在网站上行间公式既不显示，也不渲染.">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-05-08T03:39:04.480Z">
-<meta property="article:modified_time" content="2023-05-13T00:55:26.630Z">
+<meta property="article:published_time" content="2023-05-15T03:19:03.000Z">
+<meta property="article:modified_time" content="2023-05-15T03:27:37.660Z">
 <meta property="article:author" content="Hao Li">
+<meta property="article:tag" content="Hexo 教程">
+<meta property="article:tag" content="博客教程">
+<meta property="article:tag" content="kramed">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/2023/05/08/hello-world/">
+<link rel="canonical" href="http://example.com/2023/05/15/Hexo%E5%85%AC%E5%BC%8F/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/05/08/hello-world/","path":"2023/05/08/hello-world/","title":"Hello World"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/05/15/Hexo%E5%85%AC%E5%BC%8F/","path":"2023/05/15/Hexo公式/","title":"Hexo 经验分享(4) | Hexo 数学公式渲染"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Hello World | 自由笔记</title>
+<title>Hexo 经验分享(4) | Hexo 数学公式渲染 | 自由笔记</title>
   
 
 
@@ -111,7 +114,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E6%B8%B2%E6%9F%93%E5%BC%95%E6%93%8E"><span class="nav-number">1.</span> <span class="nav-text">更换渲染引擎</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B8%B2%E6%9F%93%E9%81%BF%E5%85%8D%E5%86%B2%E7%AA%81"><span class="nav-number">2.</span> <span class="nav-text">渲染避免冲突</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%BC%80%E5%90%AF-MathJax"><span class="nav-number">3.</span> <span class="nav-text">配置文件开启 MathJax</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A1%8C%E9%97%B4%E5%85%AC%E5%BC%8F%E4%BF%AE%E6%94%B9"><span class="nav-number">4.</span> <span class="nav-text">行间公式修改</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">5.</span> <span class="nav-text">参考</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -170,7 +173,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/08/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/15/Hexo%E5%85%AC%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -183,12 +186,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Hello World | 自由笔记">
+      <meta itemprop="name" content="Hexo 经验分享(4) | Hexo 数学公式渲染 | 自由笔记">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hello World
+          Hexo 经验分享(4) | Hexo 数学公式渲染
         </h1>
 
         <div class="post-meta-container">
@@ -198,15 +201,18 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2023-05-08 11:39:04" itemprop="dateCreated datePublished" datetime="2023-05-08T11:39:04+08:00">2023-05-08</time>
+      <time title="创建时间：2023-05-15 11:19:03 / 修改时间：11:27:37" itemprop="dateCreated datePublished" datetime="2023-05-15T11:19:03+08:00">2023-05-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
+        <i class="far fa-folder"></i>
       </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-05-13 08:55:26" itemprop="dateModified" datetime="2023-05-13T08:55:26+08:00">2023-05-13</time>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Hexo-%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">Hexo 教程</span></a>
+        </span>
     </span>
 
   
@@ -216,7 +222,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>367</span>
+      <span>932</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -233,16 +239,16 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+    <div class="post-body" itemprop="articleBody"><p>在使用 <code>markdown</code> 编写文章时，有些公式并不能正确显示. 在配置网站时，这个问题困扰了好久，解决方法和网上有些不同，<br>遇到的问题是，本地的 <code>markdown</code> 公式在本地正确地显示，在网站上行间公式既不显示，也不渲染.</p>
 <span id="more"></span>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>结合网上的一些办法，做了以下操作</p>
+<h1 id="更换渲染引擎"><a href="#更换渲染引擎" class="headerlink" title="更换渲染引擎"></a>更换渲染引擎</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
+<h1 id="渲染避免冲突"><a href="#渲染避免冲突" class="headerlink" title="渲染避免冲突"></a>渲染避免冲突</h1><p>进入 <code>kramed</code> 目录，修改 <code>\node_modules\kramed\lib\rules\inline.js</code>.<br>修改下列两行<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//  escape: /^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/,</span><br><span class="line">  escape: /^\\([`*\[\]()#$+\-.!_&gt;])/</span><br></pre></td></tr></table></figure><br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//  em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span><br><span class="line">  em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span><br></pre></td></tr></table></figure></p>
+<h1 id="配置文件开启-MathJax"><a href="#配置文件开启-MathJax" class="headerlink" title="配置文件开启 MathJax"></a>配置文件开启 MathJax</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">math:</span><br><span class="line">  # Default (false) will load mathjax / katex script on demand.</span><br><span class="line">  # That is it only render those page which has `mathjax: true` in front-matter.</span><br><span class="line">  # If you set it to true, it will load mathjax / katex script EVERY PAGE.</span><br><span class="line">  enable: true</span><br><span class="line">  every_page: true</span><br><span class="line"></span><br><span class="line">  mathjax:</span><br><span class="line">    enable: true</span><br><span class="line">    # Available values: none | ams | all</span><br><span class="line">    tags: none</span><br><span class="line">    per_page: true</span><br><span class="line"></span><br><span class="line">  katex:</span><br><span class="line">    enable: true</span><br><span class="line">    # See: https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex</span><br><span class="line">    copy_tex: true</span><br></pre></td></tr></table></figure>
+<h1 id="行间公式修改"><a href="#行间公式修改" class="headerlink" title="行间公式修改"></a>行间公式修改</h1><p><code>$$ a + b = c $$</code> 修改为 <code>\$$ a + b = c \$$</code>.<br>至此，行间公式就可以正常显示了.</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44846324/article/details/114582328">Hexo 中渲染 MathJax 数学公式</a></li>
+</ul>
 
     </div>
 
@@ -278,7 +284,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://example.com/2023/05/08/hello-world/" title="Hello World">http://example.com/2023/05/08/hello-world/</a>
+      <a href="http://example.com/2023/05/15/Hexo%E5%85%AC%E5%BC%8F/" title="Hexo 经验分享(4) | Hexo 数学公式渲染">http://example.com/2023/05/15/Hexo公式/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -286,16 +292,21 @@
 </ul>
 </div>
 
+          <div class="post-tags">
+              <a href="/tags/Hexo-%E6%95%99%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> Hexo 教程</a>
+              <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 博客教程</a>
+              <a href="/tags/kramed/" rel="tag"><i class="fa fa-tag"></i> kramed</a>
+          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/2023/05/14/CentOS-%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6/" rel="prev" title="CentOS 下载文件">
+                  <i class="fa fa-chevron-left"></i> CentOS 下载文件
+                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/05/11/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%9A%84%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90/" rel="next" title="卷积神经网络的复杂度分析">
-                  卷积神经网络的复杂度分析 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -377,7 +388,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"livelihao","repo":"livelihao.github.io","client_id":"9ff0df8e21f1606edda1","client_secret":"562d6607f4e4139e56e832346af9ee1c24d68f9b","admin_user":"livelihao","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"81b47fb15c96120f98d47900eb9e6aa9"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"livelihao","repo":"livelihao.github.io","client_id":"9ff0df8e21f1606edda1","client_secret":"562d6607f4e4139e56e832346af9ee1c24d68f9b","admin_user":"livelihao","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"0215dfa6a8e350112267ae59561b13ba"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>
